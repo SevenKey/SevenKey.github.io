@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java8," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="SevenKey Ack The World">
-<meta property="og:url" content="https://sevenkey.github.io/index.html">
+<meta name="description" content="Lambda表达式在java8之前，java一直缺乏函数式编程风格。随着函数式编程风格的流行，在java8支持的lambda表达式之后，利用java也可以写出简洁流畅的函数式编程风格的代码。 什么是Lambda表达式？Lambda表达式可以指代一个匿名函数。形如 expression = (variable) -&amp;gt; action java 底层如何支持lambda表达式的？jdk在java.">
+<meta name="keywords" content="java8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java8最佳实践">
+<meta property="og:url" content="https://sevenkey.github.io/2018/07/26/8新特性/index.html">
 <meta property="og:site_name" content="SevenKey Ack The World">
+<meta property="og:description" content="Lambda表达式在java8之前，java一直缺乏函数式编程风格。随着函数式编程风格的流行，在java8支持的lambda表达式之后，利用java也可以写出简洁流畅的函数式编程风格的代码。 什么是Lambda表达式？Lambda表达式可以指代一个匿名函数。形如 expression = (variable) -&amp;gt; action java 底层如何支持lambda表达式的？jdk在java.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-17T07:51:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SevenKey Ack The World">
+<meta name="twitter:title" content="java8最佳实践">
+<meta name="twitter:description" content="Lambda表达式在java8之前，java一直缺乏函数式编程风格。随着函数式编程风格的流行，在java8支持的lambda表达式之后，利用java也可以写出简洁流畅的函数式编程风格的代码。 什么是Lambda表达式？Lambda表达式可以指代一个匿名函数。形如 expression = (variable) -&amp;gt; action java 底层如何支持lambda表达式的？jdk在java.">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://sevenkey.github.io/"/>
+  <link rel="canonical" href="https://sevenkey.github.io/2018/07/26/8新特性/"/>
 
 
 
 
 
-  <title>SevenKey Ack The World</title>
+  <title>java8最佳实践 | SevenKey Ack The World</title>
   
 
 
@@ -160,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -277,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/26/8新特性/" itemprop="url">java8最佳实践</a></h1>
+          <h1 class="post-title" itemprop="name headline">java8最佳实践</h1>
         
 
         <div class="post-meta">
@@ -329,9 +330,7 @@
       
 
       
-        
-          
-            <h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><p>在java8之前，java一直缺乏函数式编程风格。随着函数式编程风格的流行，在java8支持的lambda表达式之后，利用java也可以写出简洁流畅的函数式编程风格的代码。</p>
+        <h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><p>在java8之前，java一直缺乏函数式编程风格。随着函数式编程风格的流行，在java8支持的lambda表达式之后，利用java也可以写出简洁流畅的函数式编程风格的代码。</p>
 <h3 id="什么是Lambda表达式？"><a href="#什么是Lambda表达式？" class="headerlink" title="什么是Lambda表达式？"></a>什么是Lambda表达式？</h3><p>Lambda表达式可以指代一个匿名函数。形如 <code>expression = (variable) -&gt; action</code></p>
 <h3 id="java-底层如何支持lambda表达式的？"><a href="#java-底层如何支持lambda表达式的？" class="headerlink" title="java 底层如何支持lambda表达式的？"></a>java 底层如何支持lambda表达式的？</h3><p>jdk在java.util.function包下提供了四种类型支持lambda。</p>
 <ul>
@@ -411,8 +410,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int longest = br.lines().mapToInt(String::length).max().getAsInt();</span><br></pre></td></tr></table></figure>
 <h3 id="用Collectors来进行reduction操作"><a href="#用Collectors来进行reduction操作" class="headerlink" title="用Collectors来进行reduction操作"></a>用Collectors来进行reduction操作</h3><p>java.util.stream.Collectors类的主要作用就是辅助进行各类有用的reduction操作。</p>
 
-          
-        
       
     </div>
     
@@ -427,263 +424,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sevenkey.github.io/2018/06/20/markdown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SevenKey">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/myHeadImage.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SevenKey Ack The World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/20/markdown/" itemprop="url">markdown</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-20T11:18:11+08:00">
-                2018-06-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/java8/" rel="tag"># java8</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h1><p>一直都想写一些博客，做一些技术沉淀，可是一直不知道从何入手。稍后等于用不，索性最近接触到了什么就写什么。</p>
-<p>前几天在github搭建了一个博客，用到了很多很多工具如hexo、node、npm、brew、markdown和git，对于这些工具都是一知半解，只是停留在使用的阶段。碰巧编写博客需要用到markdown，今天就深入了解一下markdown语法。毕竟以后就用它来写博客了。</p>
-<hr>
-<h2 id="1-什么是markdown"><a href="#1-什么是markdown" class="headerlink" title="1. 什么是markdown"></a>1. 什么是markdown</h2><p>在互联网行业中，每一种技术、工具的诞生都有它存在的价值，它一定会是某个领域佼佼者，人们创建它就是为了解决遇到的问题。markdowm的目的是提供一种易读易写的语法。</p>
-<p>markdown语法提供了少量的关键字和部分HTML语法， 这些关键字非常直观易于理解。下面我们便来学习一下markdown的语法。</p>
-<hr>
-<h2 id="2-markdown语法"><a href="#2-markdown语法" class="headerlink" title="2. markdown语法"></a>2. markdown语法</h2><h3 id="2-1-段落和换行"><a href="#2-1-段落和换行" class="headerlink" title="2.1 段落和换行"></a>2.1 段落和换行</h3><p>markdown中的段落是由一个或者多个文本组成。它的前后要有一个以上的空行（注：markdown中的空行的定义是看起来像空行即可。如果一个制表符和一个空格也是一个空行）</p>
-<p>示例</p>
-<p>我是一个markdown的段落</p>
-<h3 id="2-2-标题"><a href="#2-2-标题" class="headerlink" title="2.2 标题"></a>2.2 标题</h3><p>在想要设置的文字前加上#，#的个数表示了标题的大小。例如#表示一级标题，##表示二级标题。最多支持6个#</p>
-<p>示例</p>
-<h1 id="我是一级标题"><a href="#我是一级标题" class="headerlink" title="我是一级标题"></a>我是一级标题</h1><h2 id="我是二级标题"><a href="#我是二级标题" class="headerlink" title="我是二级标题"></a>我是二级标题</h2><h3 id="我是三级标题"><a href="#我是三级标题" class="headerlink" title="我是三级标题"></a>我是三级标题</h3><h4 id="我是四级标题"><a href="#我是四级标题" class="headerlink" title="我是四级标题"></a>我是四级标题</h4><h5 id="我是五级标题"><a href="#我是五级标题" class="headerlink" title="我是五级标题"></a>我是五级标题</h5><h6 id="我是六级标题"><a href="#我是六级标题" class="headerlink" title="我是六级标题"></a>我是六级标题</h6><h3 id="2-3-分级标题"><a href="#2-3-分级标题" class="headerlink" title="2.3 分级标题"></a>2.3 分级标题</h3><p>使用=和-表示 兼容性一般</p>
-<p>示例</p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="2-3-导航toc"><a href="#2-3-导航toc" class="headerlink" title="2.3 导航toc"></a>2.3 导航toc</h3><p>[TOC]根据标题生成的导航，兼容性一般</p>
-<p>示例<br>[TOC]</p>
-<h3 id="2-4-字体"><a href="#2-4-字体" class="headerlink" title="2.4 字体"></a>2.4 字体</h3><p>加粗：在要加粗的文字左右添加**</p>
-<p>斜体：在要加斜体的文字左右添加*，也可以使用_</p>
-<p>斜体加粗：在要加斜体加粗的文字左右添加***，也可以使用**_</p>
-<p>删除线：在要加删除线的文字左右添加~~</p>
-<p>示例</p>
-<p><strong>加粗</strong></p>
-<p><em>斜体</em>、_斜体_</p>
-<p><strong><em>斜体加粗</em></strong>、<strong><em>斜体加粗</em></strong></p>
-<p><del>删除线</del></p>
-<h3 id="2-5-引用"><a href="#2-5-引用" class="headerlink" title="2.5 引用"></a>2.5 引用</h3><p>在需要引用的文字前添加>即可，可以多层嵌套。</p>
-<p>示例</p>
-<blockquote>
-<p>我是引用</p>
-<blockquote>
-<p>我是引用</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>我也是引用</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h3 id="2-6-分割线"><a href="#2-6-分割线" class="headerlink" title="2.6 分割线"></a>2.6 分割线</h3><p>三个或者三个以上的-或者*或者 * * *。</p>
-<p>示例</p>
-<hr>
-<hr>
-<hr>
-<h3 id="2-7-列表"><a href="#2-7-列表" class="headerlink" title="2.7 列表"></a>2.7 列表</h3><p>无序列表：用-、+或者<em>任意一个表示 注意-、+或者</em>后需要跟进一个空格</p>
-<p>示例</p>
-<ul>
-<li>我是-</li>
-<li>我是-</li>
-</ul>
-<ul>
-<li>我是+</li>
-<li>我是+</li>
-</ul>
-<ul>
-<li>我是*</li>
-<li>我是*</li>
-</ul>
-<p>有序列表：1.表示 注意后面要个跟进一个空格</p>
-<p>示例</p>
-<ol>
-<li>我是有序列表1</li>
-<li>我是有序列表2</li>
-</ol>
-<p>列表之间可以嵌套，上一级和下一级之间保留三个空格即可 无序有序可以混合嵌套使用</p>
-<p>示例</p>
-<ul>
-<li>无序1<ol>
-<li>有序1</li>
-<li>有序2</li>
-</ol>
-</li>
-<li>无序2</li>
-</ul>
-<ol>
-<li>有序1<ul>
-<li>无序1</li>
-<li>无序2</li>
-</ul>
-</li>
-<li>有序2</li>
-</ol>
-<h3 id="2-8-列表任务列表"><a href="#2-8-列表任务列表" class="headerlink" title="2.8 列表任务列表"></a>2.8 列表任务列表</h3><p>通过-、[ ]和x来表示 格式：- [x] xxxx.</p>
-<p>示例</p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 选项一</li>
-<li style="list-style: none"><input type="checkbox" checked> 选项二</li>
-<li style="list-style: none"><input type="checkbox"> 选项三</li>
-</ul>
-<h3 id="2-9-代码"><a href="#2-9-代码" class="headerlink" title="2.9 代码"></a>2.9 代码</h3><p>单行（又称行内标记）：通过``表示</p>
-<p>示例</p>
-<p>外<code>我是单行</code>外</p>
-<p>多行：通过```X```表示或者保证前一行空行tab缩进</p>
-<p>示例</p>
-<p>外<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我是多行</span><br></pre></td></tr></table></figure></p>
-<p>外</p>
-<p>外</p>
-<pre><code>我是多行
-</code></pre><p>外</p>
-<h3 id="2-10-插入链接"><a href="#2-10-插入链接" class="headerlink" title="2.10 插入链接"></a>2.10 插入链接</h3><p>内联式：[](){}形式如 [百度](<a href="http://www.baidu.com/&quot;" target="_blank" rel="noopener">http://www.baidu.com/&quot;</a> 百度一下”)</p>
-<p>示例</p>
-<p><a href="http://www.baidu.com/&quot; 百度一下&quot;" target="_blank" rel="noopener">百度</a>{:target=”_blank”}</p>
-<p><strong><em>注：{:target=”_blank”}跳转方式兼容性一般，多数三方平台不支持</em></strong></p>
-<p>引用式：[][]{}形式如 [百度][\2]{:target=”_blank”}<br>[2]: <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> “百度二下”</p>
-<p>示例</p>
-<p>[百度][2]{:target=”_blank”}<br>[2]: <a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com/</a> “百度二下”</p>
-<h3 id="2-11-插入图片"><a href="#2-11-插入图片" class="headerlink" title="2.11 插入图片"></a>2.11 插入图片</h3><p>内联式：![](./01.png ‘描述’)形式</p>
-<p>示例</p>
-<p><img src="./imgs/markdown/markdown-1.jpg" alt="" title="我的图片"></p>
-<p>引用式：![name][01]、[01]: ./01.png ‘描述’形式</p>
-<p>示例</p>
-<p>![我的图片][01]<br>[01]: ./imgs/markdown/markdown-1.jpg ‘我的图片’</p>
-<p>图片可以带有链接，后面跟()链接即可</p>
-<p>示例</p>
-<p><a href="www.baidu.com"><img src="./imgs/markdown/markdown-1.jpg" alt="" title="我的图片"></a></p>
-<h3 id="2-12-插入视频"><a href="#2-12-插入视频" class="headerlink" title="2.12 插入视频"></a>2.12 插入视频</h3><p>markdown语法目前不支持视频插入，可以通过<code>&lt;iframe&gt;</code>插入如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe height=498 width=510 src=&apos;http://player.youku.com/embed/XMjgzNzM0NTYxNg==&apos; frameborder=0 &apos;allowfullscreen&apos;&gt;&lt;/iframe&gt;</span><br><span class="line">或者[![](./youku2.png)](http://v.youku.com/v_show/id_XMjgzNzM0NTYxNg==.html?spm=a2htv.20009910.contentHolderUnit2.A&amp;from=y1.3-tv-grid-1007-9910.86804.1-2#paction)&#123;:target=&quot;_blank&quot;&#125;</span><br></pre></td></tr></table></figure>
-<p>示例</p>
-<iframe height="498" width="510" src="http://player.youku.com/embed/XMjgzNzM0NTYxNg==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-<h3 id="2-13-表格"><a href="#2-13-表格" class="headerlink" title="2.13 表格"></a>2.13 表格</h3><p>:、-和|表示，其中:代表对齐方式，:与|之间不能有空格。太难用，不过有个国外的生线上生成网站<br><code>https://link.jianshu.com/?t=http://www.tablesgenerator.com/</code></p>
-<h3 id="2-14-公式"><a href="#2-14-公式" class="headerlink" title="2.14 公式"></a>2.14 公式</h3><p>$表示 一个表示左对齐，两个表示居中</p>
-<p>示例</p>
-<p>$$ x \href{why-equal.html}{=} y^2 + 1 $$<br>$ x = {-b \pm \sqrt{b^2-4ac} \over 2a}. $</p>
-<h3 id="2-15-脚注"><a href="#2-15-脚注" class="headerlink" title="2.15 脚注"></a>2.15 脚注</h3><p>Markdown[^1]<br>[^1]: Markdown是一种纯文本标记语言        // 在文章最后面显示脚注</p>
-<p>示例<br>Markdown[^1]<br>[^1]: Markdown是一种纯文本标记语言</p>
-<hr>
-<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h2><p>markdown语法就总结到这里，使用过程中因三方支持的关系，很多功能有一些不兼容的情况，这时需要酌情处理。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/20/markdown/" rel="next" title="markdown">
+                <i class="fa fa-chevron-left"></i> markdown
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -693,10 +463,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -704,6 +475,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -724,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/myHeadImage.png"
@@ -778,6 +562,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lambda表达式"><span class="nav-number">1.</span> <span class="nav-text">Lambda表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Lambda表达式？"><span class="nav-number">1.0.1.</span> <span class="nav-text">什么是Lambda表达式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java-底层如何支持lambda表达式的？"><span class="nav-number">1.0.2.</span> <span class="nav-text">java 底层如何支持lambda表达式的？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Optional"><span class="nav-number">2.</span> <span class="nav-text">Optional</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Optional常用api"><span class="nav-number">2.0.1.</span> <span class="nav-text">Optional常用api</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Stream"><span class="nav-number">3.</span> <span class="nav-text">Stream</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流操作类型"><span class="nav-number">3.0.1.</span> <span class="nav-text">流操作类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流的操作"><span class="nav-number">3.0.2.</span> <span class="nav-text">流的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#典型用法"><span class="nav-number">3.0.3.</span> <span class="nav-text">典型用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#map-flatMap"><span class="nav-number">3.0.3.1.</span> <span class="nav-text">map/flatMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#filter"><span class="nav-number">3.0.3.2.</span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#forEach"><span class="nav-number">3.0.3.3.</span> <span class="nav-text">forEach</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#peek"><span class="nav-number">3.0.3.4.</span> <span class="nav-text">peek</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#findFirst"><span class="nav-number">3.0.3.5.</span> <span class="nav-text">findFirst</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reduce"><span class="nav-number">3.0.3.6.</span> <span class="nav-text">reduce</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#limit-skip"><span class="nav-number">3.0.3.7.</span> <span class="nav-text">limit/skip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sorted"><span class="nav-number">3.0.3.8.</span> <span class="nav-text">sorted</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-max-distinct"><span class="nav-number">3.0.3.9.</span> <span class="nav-text">min/max/distinct</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用Collectors来进行reduction操作"><span class="nav-number">3.0.4.</span> <span class="nav-text">用Collectors来进行reduction操作</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -891,10 +691,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
